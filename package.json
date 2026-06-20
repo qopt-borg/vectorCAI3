@@ -1,0 +1,32 @@
+{
+  "name": "vector-app",
+  "version": "1.0.0",
+  "description": "Suite de entrenamiento de aritmética vectorial",
+  "productName": "VECTOR",
+  "author": "FIME Laguna — UAdeC",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.0",
+    "katex": "^0.16.9",
+    "pinia": "^2.1.7",
+    "quasar": "^2.14.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.8.0",
+    "@vitejs/plugin-vue": "^2.3.4",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "vite": "^2.9.16"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

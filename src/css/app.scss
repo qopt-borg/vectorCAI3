@@ -1,0 +1,133 @@
+// ── VARIABLES GLOBALES ──────────────────────────────────────────
+$primary:   #534AB7;
+$secondary: #3C3489;
+$accent:    #AFA9EC;
+$positive:  #3B6D11;
+$negative:  #A32D2D;
+$warning:   #BA7517;
+$dark:      #1d1d1d;
+
+// ── TIPOGRAFÍA ──────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ── ESTILOS BASE ────────────────────────────────────────────────
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f4fc;
+}
+
+// ── KATEX: asegurar que el font se cargue bien ──────────────────
+.katex {
+  font-size: 1.1em;
+}
+.katex-block {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+// ── CARD PERSONALIZADA ──────────────────────────────────────────
+.v-card {
+  border-radius: 12px !important;
+  border: 0.5px solid rgba(83, 74, 183, 0.12) !important;
+  box-shadow: 0 1px 4px rgba(83, 74, 183, 0.06) !important;
+}
+
+// ── ETIQUETA DE SECCIÓN ─────────────────────────────────────────
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8B85C1;
+  margin-bottom: 12px;
+}
+
+// ── TEXTO TEORÍA ────────────────────────────────────────────────
+.teoria-text {
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+// ── VECTOR DISPLAY ──────────────────────────────────────────────
+.vector-chip {
+  background: #EEEDFE;
+  border: 0.5px solid #AFA9EC;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
+// ── RETRO TEXTO ─────────────────────────────────────────────────
+.retro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+
+  td {
+    padding: 5px 8px;
+    border-bottom: 0.5px solid #e8e7f8;
+    color: #444;
+
+    &:first-child {
+      color: #999;
+      white-space: nowrap;
+      padding-right: 16px;
+      font-size: 12px;
+    }
+  }
+
+  tr:last-child td {
+    font-weight: 600;
+    color: #1a1a2e;
+    border-bottom: none;
+  }
+}
+
+// ── NAV ITEM ACTIVO ─────────────────────────────────────────────
+.q-item.active-nav {
+  color: $primary !important;
+  background: #EEEDFE !important;
+  border-left: 3px solid $primary;
+  border-radius: 0 8px 8px 0;
+
+  .q-item__label { font-weight: 600 !important; }
+  .q-icon { color: $primary !important; }
+}
+
+// ── STAT CHIP ───────────────────────────────────────────────────
+.stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #777;
+
+    .stat-val {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a2e;
+
+      &.ok { color: $positive; }
+      &.err { color: $negative; }
+    }
+  }
+}
+
+// ── MONO FONT PARA DESARROLLO ───────────────────────────────────
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
